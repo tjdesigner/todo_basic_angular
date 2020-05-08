@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;700&family=Open+Sans&display=swap");
 
+
 html {
 }
 
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(82, 185, 117);
   font-family: "Montserrat", sans-serif;
 }
 
 ul {
   text-align: left;
-  list-style-type: none;
+  list-style-type: circle;
   margin: 10px 0;
   padding: 10px;
   background: #fff;
@@ -24,27 +22,11 @@ ul {
   -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-ul > li {
-  padding: 15px;
-  margin: 10px;
-  font-size: 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  color: #000;
-  background-color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-ul > li > div {
-  margin: 10px 0 0 0;
-  display: flex;
-  justify-content: center;
-}
 
 ul > li > div > button {
   border: none;
   background-color: #ffffff;
-  font-size: 1em;
+  font-size: 22px;
   float: left;
   opacity: 0.6;
   transition: opacity 1s;
@@ -58,43 +40,20 @@ ul > li > div > button:hover {
 
 ul > li > div > button > fa-icon.ng-fa-icon.undone {
   color: red;
-  font-size: 20px;
+
 }
 ul > li > div > button > fa-icon.ng-fa-icon.done {
   color: #19af52;
-  font-size: 20px;
 }
 ul > li > div > button > fa-icon.ng-fa-icon.remove {
   color: #000000;
-  font-size: 18px;
-}
 
-.title {
-  font-family: "Dancing Script", cursive;
-  color: #fff;
-  font-size: 3em;
-  text-shadow: 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 .text-center {
   text-align: center;
 }
-.button {
-  background-color: #000;
-  border: none;
-  padding: 20px;
-  color: #fff;
-  border-radius: 30px;
-  font-size: 1em;
-  font-weight: 100;
-  padding-left: 50px;
-  padding-right: 50px;
-  cursor: pointer;
-}
 
-div {
-  background-color: #fff;
-}
 
 #modal {
   text-align: left;
@@ -128,8 +87,8 @@ div {
   line-height: 50px;
   text-indent: 10px;
   font-size: 1.2em;
-  background: #f9f9f9;
-  border: solid 1px #000;
+  background: #fff;
+  border: solid 1px #ddd;
   border-radius: 10px;
   margin: 10px 0;
   font-family: "Montserrat", sans-serif;
@@ -146,3 +105,4 @@ div {
   top: -50px;
   left: 0;
 }
+

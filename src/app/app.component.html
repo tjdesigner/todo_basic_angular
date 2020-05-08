@@ -1,10 +1,13 @@
-<h1 class="title text-center animated jackInTheBox">{{ title }}</h1>
+<div class="container tarefas-body">
+  <h1 class="title text-center animated jackInTheBox">{{ title }}</h1>
 
 <ul *ngIf="mode=='list'" class="animated flipInX">
-  <p *ngIf="todos.length==0"><small>Não tem nenhuma tarefa hoje!</small></p>
+  <p class="no-tarefa" *ngIf="todos.length==0"><small>Não tem nenhuma tarefa hoje!</small></p>
   <li *ngFor="let todo of todos">
-    {{ todo.title }}
-    <div>
+    <div class="tarefas">
+      <p class="tarefa"><fa-icon class="mark" [icon]="faAngleRight"></fa-icon> {{ todo.title }}</p>
+    </div>
+    <div class="btns-actios">
       <button *ngIf="!todo.done" (click)="markAsDone(todo)">
         <fa-icon class="undone" [icon]="faCheckCircle"></fa-icon>
       </button>
@@ -24,9 +27,9 @@
       <label>Nova tarefa: </label>
       <input type="text" placeholder="Título da tarefa" maxlength="60" formControlName="title" />
       <small class="danger" *ngIf="form.controls.title.invalid && !form.controls.title.pristine">Este campo deve conter
-        entre 3 e 60
+        entre 3 e 30
         caracteres</small>
-      <p class="text-center"> <button class="button" [disabled]="form.invalid" (click)="add()">
+      <p class="text-center btn-save"> <button class="button" [disabled]="form.invalid" (click)="add()">
           Salvar
         </button></p>
     </fieldset>
@@ -40,3 +43,4 @@
 <p class="text-center">
   <button class="add-button animated fadeInUp button" (click)="changeMode('list')" *ngIf="mode=='add'">Cancelar</button>
 </p>
+</div>

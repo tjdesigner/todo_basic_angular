@@ -7,6 +7,7 @@ import {
   faCheckCircle,
   faCircle,
   faTrash,
+  faAngleRight
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -25,6 +26,7 @@ export class AppComponent {
   faCheckCircle = faCheckCircle;
   faCircle = faCircle;
   faTrash = faTrash;
+  faAngleRight = faAngleRight;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -32,7 +34,7 @@ export class AppComponent {
         '',
         Validators.compose([
           Validators.minLength(3),
-          Validators.maxLength(60),
+          Validators.maxLength(50),
           Validators.required,
         ]),
       ],
